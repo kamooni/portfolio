@@ -22,10 +22,6 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <h1>Heading</h1>
-    <h2>Heading</h2>
-    <h3>Heading</h3>
-    <p>Heading</p>
     <!-- Navbar -->
     <nav id="navbar">
       <div class="navbar__logo">
@@ -34,7 +30,7 @@
       </div>
       <div class="navbar__menu">
         <ul class="navbar__menu">
-          <li class="navbar__menu__item">Home</li>
+          <li class="navbar__menu__item active">Home</li>
           <li class="navbar__menu__item">About</li>
           <li class="navbar__menu__item">Skills</li>
           <li class="navbar__menu__item">Work</li>
@@ -44,11 +40,11 @@
       </div>
     </nav>
     <!-- Home -->
-    <section class="home">
+    <section id="home">
       <img
         src="imgs/profile.jpg"
         alt="Moon`s profile photo"
-        class="home_avatar"
+        class="home__avatar"
       />
       <h1 class="home__title">Hello, <br />I`m Moon Coder</h1>
       <h2 class="home__description">
@@ -57,7 +53,7 @@
       <button class="home__contact">CONTACT ME</button>
     </section>
     <!-- About -->
-    <section id="about">
+    <section id="about" class="section">
       <!-- 페이지에서 공통적으로 쓰이기때문에 class 지정안해줘도됨 -->
       <h1>About Me</h1>
       <p>
@@ -69,21 +65,21 @@
       <div class="about__majors">
         <div class="major">
           <div class="major__icon"><i class="fab fa-html5"></i></div>
-          <div class="major__title">HTML</div>
+          <h2 class="major__title">HTML</h2>
           <div class="major__description">
-            Lorem ipsum dolor sit amet consectetur.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </div>
         </div>
         <div class="major">
           <div class="major__icon"><i class="fab fa-css3-alt"></i></div>
-          <div class="major__title">CSS</div>
+          <h2 class="major__title">CSS</h2>
           <div class="major__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </div>
         </div>
         <div class="major">
           <div class="major__icon"><i class="fab fa-js-square"></i></div>
-          <div class="major__title">JAVASCRIPT</div>
+          <h2 class="major__title">JAVASCRIPT</h2>
           <div class="major__description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </div>
@@ -92,18 +88,26 @@
       <div class="about__jobs">
         <div class="job">
           <img src="imgs/jobs/job__logo.png" alt="" class="job_logo" />
-          <p class="job__name">Moon`s PTSHOP Traniner Moon</p>
-          <p class="job__period">2020 Aguest . Untill now</p>
+          <div class="job__description">
+            <p class="job__name">
+              Moon`s PTSHOP Traniner Moon Amazing PT Class Man
+            </p>
+            <p class="job__period">2020 Aguest . Untill now</p>
+          </div>
         </div>
         <div class="job">
           <img src="imgs/jobs/job__logo.png" alt="" class="job_logo" />
-          <p class="job__name">Moon`s PTSHOP Traniner Moon</p>
-          <p class="job__period">2020 Aguest . Untill now</p>
+          <div class="job__description">
+            <p class="job__name">
+              Moon`s PTSHOP Traniner Moon Amazing PT Class Man
+            </p>
+            <p class="job__period">2020 Aguest . Untill now</p>
+          </div>
         </div>
       </div>
     </section>
     <!-- Skills -->
-    <section id="skills">
+    <section id="skills" class="section">
       <h1>Skills</h1>
       <h2>Skills & Attributes</h2>
       <p>
@@ -166,7 +170,7 @@
       </div>
     </section>
     <!-- Work -->
-    <section id="work">
+    <section id="work" class="section">
       <h1>My Work</h1>
       <h3>Projects</h3>
       <div class="work__categories">
@@ -244,7 +248,7 @@
       </div>
     </section>
     <!-- Testimonials -->
-    <section id="testimonials">
+    <section id="testimonials" class="section">
       <h1>Testimonials</h1>
       <h3>See what they say about me</h3>
       <div class="testimonials">
@@ -283,7 +287,7 @@
       </div>
     </section>
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="section">
       <h1 class="contact__title">Let`s talk</h1>
       <h2 class="contact__email">moon92814031@gmail.com</h2>
       <div class="contact__links">
