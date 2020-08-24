@@ -20,18 +20,20 @@ navbarMenu.addEventListener("click", (event) => {
   console.log(link);
   if (link == null) {
     return;
-  } else {
-    scrollIntoView(link);
   }
+
+  goScrollToTarget(link);
 });
 
 //Handle scrolling when click on the contack_me btn
+
 const contactMeBtn = document.querySelector(".home__contact");
+
 contactMeBtn.addEventListener("click", () => {
-  scrollIntoView("#contact");
+  goScrollToTarget("#contact");
 });
 
-function scrollIntoView(selector) {
+function goScrollToTarget(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
