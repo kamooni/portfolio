@@ -41,6 +41,21 @@ document.addEventListener("scroll", () => {
   home__container.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+//Go to #home when top__btn clicked
+const top__button = document.querySelector(".top__btn");
+document.addEventListener("scroll", () => {
+  if (window.scrollY < homeHeight / 2) {
+    top__button.classList.remove("visible");
+  } else {
+    top__button.classList.add("visible");
+  }
+});
+
+top__button.addEventListener("click", () => {
+  goScrollToTarget("#home");
+});
+
+// function
 function goScrollToTarget(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
