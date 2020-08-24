@@ -55,6 +55,30 @@ top__button.addEventListener("click", () => {
   goScrollToTarget("#home");
 });
 
+// Projects
+const workBtnContainer = document.querySelector(".work__categories");
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+workBtnContainer.addEventListener("click", (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+
+  //same
+  //for(let project of projects){}
+  //for(let i = 0;i<projects.length;i++){
+  //  project = projects[i];
+  //}
+  projects.forEach((project) => {
+    if (filter === "*" || filter === project.dataset.type) {
+      project.classList.remove("invisible");
+    } else {
+      project.classList.add("invisible");
+    }
+  });
+});
+
 // function
 function goScrollToTarget(selector) {
   const scrollTo = document.querySelector(selector);
