@@ -42,16 +42,16 @@ document.addEventListener("scroll", () => {
 });
 
 //Go to #home when top__btn clicked
-const top__button = document.querySelector(".top__btn");
+const arrow__up = document.querySelector(".arrow__up");
 document.addEventListener("scroll", () => {
   if (window.scrollY < homeHeight / 2) {
-    top__button.classList.remove("visible");
+    arrow__up.classList.remove("visible");
   } else {
-    top__button.classList.add("visible");
+    arrow__up.classList.add("visible");
   }
 });
 
-top__button.addEventListener("click", () => {
+arrow__up.addEventListener("click", () => {
   goScrollToTarget("#home");
 });
 
@@ -70,13 +70,19 @@ workBtnContainer.addEventListener("click", (e) => {
   //for(let i = 0;i<projects.length;i++){
   //  project = projects[i];
   //}
-  projects.forEach((project) => {
-    if (filter === "*" || filter === project.dataset.type) {
-      project.classList.remove("invisible");
-    } else {
-      project.classList.add("invisible");
-    }
-  });
+  projectContainer.classList.add("anim-out");
+
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === "*" || filter === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+
+    projectContainer.classList.remove("anim-out");
+  }, 300);
 });
 
 // function
