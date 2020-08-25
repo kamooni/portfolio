@@ -48,16 +48,18 @@
     </nav>
     <!-- Home -->
     <section id="home">
-      <img
-        src="imgs/profile.jpg"
-        alt="Moon`s profile photo"
-        class="home__avatar"
-      />
-      <h1 class="home__title">Hello, <br />I`m Moon Coder</h1>
-      <h2 class="home__description">
-        A software Engineer currently residing in Busan, Korea
-      </h2>
-      <button class="home__contact">CONTACT ME</button>
+      <div class="home__container">
+        <img
+          src="imgs/profile.jpg"
+          alt="Moon`s profile photo"
+          class="home__avatar"
+        />
+        <h1 class="home__title">Hello, <br />I`m Moon Coder</h1>
+        <h2 class="home__description">
+          A software Engineer currently residing in Busan, Korea
+        </h2>
+        <button class="home__contact">CONTACT ME</button>
+      </div>
     </section>
     <!-- About -->
     <section id="about" class="section section__container">
@@ -184,29 +186,29 @@
         <h1>My Work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-          <button class="category__btn active">
+          <button class="category__btn active" data-filter="*">
             All<span class="category__count">8</span>
           </button>
-          <button class="category__btn">
+          <button class="category__btn" data-filter="front-end">
             Front-end<span class="category__count">3</span>
           </button>
-          <button class="category__btn">
+          <button class="category__btn" data-filter="back-end">
             Back-end<span class="category__count">3</span>
           </button>
-          <button class="category__btn">
+          <button class="category__btn" data-filter="mobile">
             Mobile<span class="category__count">2</span>
           </button>
         </div>
 
         <div class="work__projects">
-          <a href="#" class="project" target="blank">
+          <a href="#" class="project" target="blank" data-type="front-end">
             <img src="imgs/projects/navbar__project.png" alt="navbar!" cla" />
             <div class="project__description">
               <h3>Navbar Project</h3>
               <span>Clone coding with HTML and CSS</span>
             </div>
           </a>
-          <a href="#" class="project" target="blank">
+          <a href="#" class="project" target="blank" data-type="front-end">
             <img
               src="imgs/projects/navbar__project.png"
               alt="navbar!"
@@ -217,7 +219,7 @@
               <span>Clone coding with HTML and CSS</span>
             </div>
           </a>
-          <a href="#" class="project" target="blank">
+          <a href="#" class="project" target="blank" data-type="front-end">
             <img
               src="imgs/projects/navbar__project.png"
               alt="navbar!"
@@ -228,7 +230,7 @@
               <span>Clone coding with HTML and CSS</span>
             </div>
           </a>
-          <a href="#" class="project" target="blank">
+          <a href="#" class="project" target="blank" data-type="back-end">
             <img
               src="imgs/projects/navbar__project.png"
               alt="navbar!"
@@ -239,7 +241,7 @@
               <span>Clone coding with HTML and CSS</span>
             </div>
           </a>
-          <a href="#" class="project" target="blank">
+          <a href="#" class="project" target="blank" data-type="back-end">
             <img
               src="imgs/projects/navbar__project.png"
               alt="navbar!"
@@ -250,7 +252,7 @@
               <span>Clone coding with HTML and CSS</span>
             </div>
           </a>
-          <a href="#" class="project" target="blank">
+          <a href="#" class="project" target="blank" data-type="back-end">
             <img
               src="imgs/projects/navbar__project.png"
               alt="navbar!"
@@ -261,7 +263,7 @@
               <span>Clone coding with HTML and CSS</span>
             </div>
           </a>
-          <a href="#" class="project" target="blank">
+          <a href="#" class="project" target="blank" data-type="mobile">
             <img
               src="imgs/projects/navbar__project.png"
               alt="navbar!"
@@ -272,7 +274,7 @@
               <span>Clone coding with HTML and CSS</span>
             </div>
           </a>
-          <a href="#" class="project" target="blank">
+          <a href="#" class="project" target="blank" data-type="mobile">
             <img
               src="imgs/projects/navbar__project.png"
               alt="navbar!"
@@ -343,5 +345,8 @@
       </div>
       <p class="contact__rights">2020 Moon Coding Hwan - All rights reserved</p>
     </section>
+
+    <!-- Arrow up -->
+    <button class="top__btn"><i class="fas fa-arrow-up"></i></button>
   </body>
 </html>
