@@ -21,8 +21,14 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
-
+  navbarMenu.classList.remove("open");
   goScrollToTarget(link);
+});
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 //Handle scrolling when click on the contack_me btn
