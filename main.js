@@ -61,6 +61,8 @@ const projectContainer = document.querySelector(".work__projects");
 const projects = document.querySelectorAll(".project");
 workBtnContainer.addEventListener("click", (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  const activeadd = e.target;
+  console.log(activeadd);
   if (filter == null) {
     return;
   }
@@ -70,6 +72,14 @@ workBtnContainer.addEventListener("click", (e) => {
   //for(let i = 0;i<projects.length;i++){
   //  project = projects[i];
   //}
+
+  // Remove selection from the previous item and select the new one
+  const active = document.querySelector(".category__btn.selected");
+  active.classList.remove("selected");
+  const target =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  target.classList.add("selected");
+
   projectContainer.classList.add("anim-out");
 
   setTimeout(() => {
